@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html lang="th">
+
+<head>
+		<title>Horoscope</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Horoscope</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="1.html">ดูดวงประจำวัน</a></li>
+						<li><a href="3.html">ดูดวงการเงิน</a></li>
+						<li><a href="4.html">ดวงโดยรวม</a></li>
+						<li><a href="elements.html">Support</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+			
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">ดูดวงความรัก Love horoscope</h1>
+
+							<!DOCTYPE html>
+							<html lang="th">
+							<head>
+							  <meta charset="UTF-8">
+							  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							  <title>การดูดวงไพ่ทาโร่ต์</title>
+							  <style>
+								body {
+								  font-family: Arial, sans-serif;
+								  text-align: center;
+								  padding: 50px;
+								  background-color: #2e1160;
+								}
+								button {
+								  padding: 10px 20px;
+								  font-size: 16px;
+								  background-color: #4CAF50;
+								  color: rgb(238, 208, 208);
+								  border: none;
+								  cursor: pointer;
+								  margin-top: 20px;
+								}
+								button:hover {
+								  background-color: #45a049;
+								}
+							
+								/* สไตล์ของ Modal */
+								.modal {
+								  display: none; /* เริ่มต้นไม่ให้แสดง */
+								  position: fixed; /* อยู่ตำแหน่งคงที่ */
+								  z-index: 1; /* ทำให้ Modal อยู่ด้านบนสุด */
+								  left: 0;
+								  top: 0;
+								  width: 100%;
+								  height: 100%;
+								  background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังมืด */
+								  overflow: auto;
+								  padding-top: 60px;
+								}
+							
+								/* สไตล์ของ Modal Content */
+								.modal-content {
+								  background-color: #511c5e;
+								  margin: 5% auto;
+								  padding: 20px;
+								  border: 1px solid #adbc5a;
+								  width: 80%;
+								  max-width: 500px;
+								}
+							
+								/* ปุ่มปิด */
+								.close {
+								  color: #aaa;
+								  float: right;
+								  font-size: 28px;
+								  font-weight: bold;
+								}
+							
+								.close:hover,
+								.close:focus {
+								  color: black;
+								  text-decoration: none;
+								  cursor: pointer;
+								}
+							  </style>
+							  
+							</head>
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horoscope</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #2e1160;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      overflow: auto;
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #511c5e;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .loading {
+      display: none;
+      font-size: 20px;
+      color: rgb(216, 88, 150);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>การดูดวงไพ่ทาโร่ต์</h1>
+  <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+
+  <!-- Form to enter name and birthdate -->
+  <form id="horoscopeForm">
+    <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+    <input type="date" id="dob" required><br><br>
+    <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
+  </form>
+
+  <!-- Loading message -->
+  <div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่ </div>
+
+  <!-- Modal for result -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>ผลการดูดวง</h2>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    // Tarot card data
+    const tarotCards = [
+								  "The Two of Cups (สองถ้วย):ไพ่ Two of Cups เป็นไพ่ที่หมายถึงความสัมพันธ์ที่สมดุลและมีความรักที่แท้จริง เป็นสัญลักษณ์ของการเชื่อมต่อกันอย่างลึกซึ้งระหว่างสองคน ทั้งในด้านอารมณ์และจิตใจความหมาย: ความรักที่สมดุล, การร่วมมือกัน, ความสัมพันธ์ที่เชื่อมโยงและเข้ากันได้ดี",
+								  "The Ace of Cups (หนึ่งถ้วย):ไพ่ Ace of Cups แสดงถึงการเริ่มต้นใหม่ในด้านความรัก เช่น ความรักใหม่ หรือความสัมพันธ์ใหม่ที่เต็มไปด้วยความรู้สึกดีๆ มักจะเป็นสัญลักษณ์ของอารมณ์ที่แท้จริงและการเริ่มต้นในสิ่งที่ดีความหมาย: การเริ่มต้นใหม่ในความรัก, ความรู้สึกใหม่, โอกาสใหม่ในความสัมพันธ์",
+								  "The Empress (จักรพรรดินี):ไพ่ The Empress เป็นไพ่ที่เกี่ยวข้องกับความรักและการดูแลความสัมพันธ์ มักจะหมายถึงความรักที่มีการเติบโตและการพัฒนาที่ดี และยังเป็นสัญลักษณ์ของความอุดมสมบูรณ์และการดูแลเอาใจใส่ในความสัมพันธ์ความหมาย: การดูแลและเอาใจใส่ในความรัก, ความอุดมสมบูรณ์, การสร้างความสัมพันธ์ที่เติบโต",
+								  "The Ten of Cups (สิบถ้วย):ไพ่ Ten of Cups เป็นไพ่ที่เกี่ยวข้องกับความสุขในครอบครัวและความรักที่สมบูรณ์แบบ มักจะหมายถึงความสำเร็จและความพึงพอใจในชีวิตรักและครอบครัวความหมาย: ความสุขที่แท้จริงในความรัก, ความสมบูรณ์แบบในความสัมพันธ์, ความรักในครอบครัว",
+								  "The Knight of Cups (อัศวินแห่งถ้วย):ไพ่ Knight of Cups เป็นสัญลักษณ์ของการแสดงออกที่โรแมนติกและความมุ่งมั่นในความรัก มักจะบ่งบอกถึงการเดินทางในความรักหรือการแสดงออกที่เต็มไปด้วยความอ่อนโยนและความใส่ใจความหมาย: การแสดงออกที่โรแมนติก, การไล่ตามความรัก, ความรักที่เต็มไปด้วยอารมณ์",
+								  "The Queen of Cups (ราชินีแห่งถ้วย):ไพ่ Queen of Cups หมายถึงความรู้สึกที่ละเอียดอ่อนและการเอาใจใส่ในความสัมพันธ์ เป็นสัญลักษณ์ของความเข้าใจและการดูแลความรักความหมาย: ความรักที่เอาใจใส่, ความอ่อนไหวในความสัมพันธ์, การรับฟังและการดูแลในความรัก",
+								  "The Page of Cups (เพจแห่งถ้วย):ไพ่ Page of Cups หมายถึงการแสดงออกทางอารมณ์ที่บริสุทธิ์และเปิดกว้างในความรัก มักจะเกี่ยวข้องกับความรักที่เต็มไปด้วยจินตนาการ ความหวัง และความตั้งใจความหมาย: ความรักที่บริสุทธิ์, การแสดงออกทางอารมณ์, ความหวังและจินตนาการในความรัก",
+								  "The Three of Swords (สามดาบ):ไพ่ Three of Swords แสดงถึงความเจ็บปวดในความรัก มักจะเกี่ยวข้องกับการสูญเสียหรือการแตกหักในความสัมพันธ์ แม้ว่าจะเป็นไพ่ที่บ่งบอกถึงความเจ็บปวด แต่ก็มีการเรียนรู้จากประสบการณ์เหล่านี้ความหมาย: ความเจ็บปวด, การผิดหวังในความรัก, การฟื้นฟูจากความเจ็บปวด",
+								  "The Tower (หอคอย):ไพ่ The Tower เป็นไพ่ที่หมายถึงการเปลี่ยนแปลงครั้งใหญ่ที่อาจจะเกิดขึ้นในความสัมพันธ์ ซึ่งอาจเป็นการทำลายล้างหรือการเริ่มต้นใหม่ที่ตามมาความหมาย: การเปลี่ยนแปลงครั้งใหญ่ในความรัก, ความตกใจหรือการแตกหักในความสัมพันธ์, การเรียนรู้จากความผิดพลาด",
+								  "The Three of Swords (สามดาบ)ความหมาย: ไพ่ Three of Swords เป็นไพ่ที่แสดงถึงความเจ็บปวดจากการแตกหักในความรัก เช่น การทรยศหักหลัง ความผิดหวัง หรือการสูญเสียไปรักครั้งสำคัญ อาจหมายถึงการเจ็บปวดจากการรักที่ไม่ได้รับการตอบรับ หรือการสูญเสียความรักจากการทำลายความสัมพันธ์",
+								  "The Fool (ผู้ไร้เดียงสา):ไพ่ The Fool เป็นสัญลักษณ์ของการเริ่มต้นใหม่อย่างกล้าหาญในชีวิตความรัก เป็นการก้าวไปข้างหน้าโดยไม่กลัวการล้มเหลวหรือความไม่แน่นอนความหมาย: การเริ่มต้นใหม่ในความรัก, ความบริสุทธิ์และการผจญภัยในความสัมพันธ์",
+								 "The Ten of Swords (สิบดาบ)ความหมาย: ไพ่ Ten of Swords แสดงถึงการสิ้นสุดอย่างชัดเจนในความรัก ซึ่งมักจะหมายถึงการเจ็บปวดสูงสุดหรือการจบความสัมพันธ์ที่ทำให้รู้สึกสิ้นหวังและล้มเหลว มักบ่งบอกถึงความเจ็บปวดจากการถูกหักหลังหรือการแตกหักอย่างไม่คาดคิดตัวอย่าง: การจบความสัมพันธ์ที่ไม่สามารถย้อนกลับได้ ความรู้สึกเหมือนโดนหักหลังหรือความผิดหวังที่ทำให้เจ็บปวดมาก", 
+								  "The Tower (หอคอย)ความหมาย: ไพ่ The Tower แสดงถึงการเปลี่ยนแปลงที่รุนแรงและไม่คาดคิด ซึ่งมักจะหมายถึงการล่มสลายของสิ่งที่เคยเป็นความมั่นคงในความรัก อาจเป็นการเลิกราหรือการแตกหักที่ทำให้เกิดความสับสนและความเสียหายตัวอย่าง: การแตกหักที่รุนแรงจากการเปลี่ยนแปลงที่ไม่คาดคิดในความสัมพันธ์ เช่น การหลอกลวงหรือการเปิดเผยความจริงที่ทำให้เกิดความเจ็บปวด",
+								 "The Eight of Cups (แปดถ้วย)ความหมาย: ไพ่ Eight of Cups บ่งบอกถึงการเดินจากไปหรือการละทิ้งสิ่งที่เคยรัก การทิ้งความสัมพันธ์ที่ไม่สมบูรณ์และพยายามหาความหมายใหม่ในชีวิต มักหมายถึงการยอมรับว่าไม่สามารถแก้ไขความสัมพันธ์นั้นได้และตัดสินใจเดินหน้าต่อไปตัวอย่าง: การตัดสินใจทิ้งความสัมพันธ์ที่ไม่สร้างความสุข หรือการเดินออกจากความรักที่ไม่สมหวัง",
+								  "The Devil (ปีศาจ)ความหมาย: ไพ่ The Devil มักแสดงถึงความหลงใหลที่มีพิษ หรือการถูกผูกมัดในความสัมพันธ์ที่ไม่ดี หรือความรักที่เป็นพิษ เช่น การควบคุมกันในความสัมพันธ์ หรือการเสพติดทางอารมณ์ที่ทำให้ไม่สามารถเดินออกจากวงจรที่ไม่ดีได้ตัวอย่าง: การอยู่ในความสัมพันธ์ที่ทำให้รู้สึกขาดอิสระ หรือมีความสัมพันธ์ที่ทำให้ตกอยู่ในสภาวะที่ไม่ดี",
+								 "The Five of Pentacles (ห้าหมากรุก)ความหมาย: ไพ่ Five of Pentacles แสดงถึงความขาดแคลนหรือการถูกทิ้งให้อยู่ในสภาวะที่ยากจนหรือไม่สมหวังในด้านความรัก มักจะบ่งบอกถึงความรู้สึกโดดเดี่ยว ความสัมพันธ์ที่ไม่มีความเข้าใจ หรือการที่รู้สึกว่าถูกทอดทิ้งตัวอย่าง: ความสัมพันธ์ที่เต็มไปด้วยความขัดแย้งหรือการทิ้งกันโดยไม่ใส่ใจ",
+								  "The Moon (พระจันทร์)ความหมาย: ไพ่ The Moon เป็นสัญลักษณ์ของความสับสน การหลอกลวง หรือความไม่ชัดเจนในความรัก มักจะบ่งบอกถึงการมีอารมณ์ที่ไม่มั่นคงหรือความสัมพันธ์ที่เต็มไปด้วยความลับและความไม่ซื่อสัตย์ตัวอย่าง: ความรักที่ถูกปกปิดหรือมีการหลอกลวงอยู่เบื้องหลัง ความสัมพันธ์ที่ทำให้รู้สึกไม่แน่ใจหรือกลัว",
+								 "The Hermit (ฤาษี):ความหมาย: ไพ่ The Hermit แสดงถึงการแสวงหาความเข้าใจในตนเอง หรือการแยกตัวออกจากความสัมพันธ์ในช่วงเวลาที่รู้สึกอ้างว้าง ไพ่ใบนี้อาจแสดงถึงการหาคำตอบในความรักผ่านการสะท้อนตัวเองหรือการใช้เวลาคนเดียวตัวอย่าง: การถอยห่างจากความสัมพันธ์ที่ไม่ดีและใช้เวลาคิดอย่างลึกซึ้งเกี่ยวกับสิ่งที่เกิดขึ้น",
+								  "The Five of Cups (ห้าถ้วย)ความหมาย: ไพ่ Five of Cups แสดงถึงการเสียใจจากความรักที่ผิดหวังหรือการสูญเสีย ความเศร้าหมองจากการมองเห็นสิ่งที่หายไปและไม่สามารถกู้คืนมาได้ โดยมักจะเน้นไปที่อารมณ์ที่เศร้าหมองจากการเสียบางสิ่งไปในชีวิตตัวอย่าง: รู้สึกเศร้าโศกจากการสูญเสียคนรักหรือการรักที่ไม่ได้รับการตอบกลับ",
+								 "The Lovers (ความรัก):ไพ่ The Lovers เป็นไพ่ที่มีความเกี่ยวข้องกับความรักโดยตรงและเป็นสัญลักษณ์ของการตัดสินใจในความสัมพันธ์ มักจะหมายถึงการเลือกระหว่างสองทางเลือกในเรื่องของความรักหรือการมีความสัมพันธ์ที่ลึกซึ้งและมีการตัดสินใจร่วมกัน ไพ่ใบนี้อาจแสดงถึงความรักที่มีความหมายและสัมพันธ์ที่มีความเข้าใจซึ่งกันและกันความหมาย: ความรักที่แท้จริง, การตัดสินใจในความสัมพันธ์, ความสัมพันธ์ที่มีความสมดุล"
+								];
+
+    // Function to start the prediction
+    function startPrediction() {
+      // Show loading message
+      document.getElementById('loadingMessage').style.display = 'block';
+
+      // Simulate a delay before showing the result
+      setTimeout(function() {
+        // Hide loading message
+        document.getElementById('loadingMessage').style.display = 'none';
+
+        // Show random tarot card
+        const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+        document.getElementById('result').innerText = randomCard;
+
+        // Show modal with result
+        document.getElementById("myModal").style.display = "block";
+      }, 9000); // Simulate a 2-second delay
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>

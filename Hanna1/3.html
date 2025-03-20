@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="th">
+
+<head>
+		<title>Horoscope</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Horoscope</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="1.html">ดูดวงประจำวัน</a></li>
+						<li><a href="2.html">ดูดวงความรัก</a></li>
+						<li><a href="4.html">ดวงโดยรวม</a></li>
+						<li><a href="elements.html">Support</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+			
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">ดูดวงการเงิน money horoscope</h1>
+
+							<!DOCTYPE html>
+							<html lang="th">
+							<head>
+							  <meta charset="UTF-8">
+							  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							  <title>การดูดวงไพ่ทาโร่ต์</title>
+							  <style>
+								body {
+								  font-family: Arial, sans-serif;
+								  text-align: center;
+								  padding: 50px;
+								  background-color: #2e1160;
+								}
+								button {
+								  padding: 10px 20px;
+								  font-size: 16px;
+								  background-color: #4CAF50;
+								  color: rgb(238, 208, 208);
+								  border: none;
+								  cursor: pointer;
+								  margin-top: 20px;
+								}
+								button:hover {
+								  background-color: #45a049;
+								}
+							
+								/* สไตล์ของ Modal */
+								.modal {
+								  display: none; /* เริ่มต้นไม่ให้แสดง */
+								  position: fixed; /* อยู่ตำแหน่งคงที่ */
+								  z-index: 1; /* ทำให้ Modal อยู่ด้านบนสุด */
+								  left: 0;
+								  top: 0;
+								  width: 100%;
+								  height: 100%;
+								  background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังมืด */
+								  overflow: auto;
+								  padding-top: 60px;
+								}
+							
+								/* สไตล์ของ Modal Content */
+								.modal-content {
+								  background-color: #511c5e;
+								  margin: 5% auto;
+								  padding: 20px;
+								  border: 1px solid #adbc5a;
+								  width: 80%;
+								  max-width: 500px;
+								}
+							
+								/* ปุ่มปิด */
+								.close {
+								  color: #aaa;
+								  float: right;
+								  font-size: 28px;
+								  font-weight: bold;
+								}
+							
+								.close:hover,
+								.close:focus {
+								  color: black;
+								  text-decoration: none;
+								  cursor: pointer;
+								}
+							  </style>
+							  
+							</head>
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horoscope</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #2e1160;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      overflow: auto;
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #511c5e;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .loading {
+      display: none;
+      font-size: 20px;
+      color: rgb(216, 88, 150);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>การดูดวงไพ่ทาโร่ต์</h1>
+  <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+
+  <!-- Form to enter name and birthdate -->
+  <form id="horoscopeForm">
+    <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+    <input type="date" id="dob" required><br><br>
+    <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
+  </form>
+
+  <!-- Loading message -->
+  <div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่ </div>
+
+  <!-- Modal for result -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>ผลการดูดวง</h2>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    // Tarot card data
+    const tarotCards = [
+								 "The Magician (จอมเวทย์)ความหมาย: ไพ่ The Magician สะท้อนถึงการใช้ทักษะ ความสามารถ และเครื่องมือที่มีอยู่ในการสร้างความสำเร็จ รวมถึงการใช้โอกาสที่มีในชีวิตให้เกิดประโยชน์การเงิน: ไพ่ใบนี้แสดงถึงการมีความสามารถในการควบคุมสถานการณ์ทางการเงินและการทำให้ทรัพย์สินเติบโต ถ้าคุณสามารถใช้ทรัพยากรที่มีในมือได้ดี คุณจะสามารถสร้างความสำเร็จในด้านการเงินได้",
+								"The Emperor (จักรพรรดิ)ความหมาย: ไพ่ The Emperor เป็นสัญลักษณ์ของการควบคุม การบริหารจัดการ และการวางแผนอย่างมีระเบียบการเงิน: ไพ่ใบนี้บ่งบอกถึงการควบคุมการเงินที่มั่นคงและการวางแผนทางการเงินอย่างรอบคอบ มันแสดงให้เห็นถึงความสำเร็จในด้านการเงินผ่านการจัดการที่ดีและมีระเบียบ",
+								"The Ace of Pentacles (เอซแห่งเหรียญ)ความหมาย: ไพ่ Ace of Pentacles เป็นไพ่ที่เกี่ยวข้องกับโอกาสใหม่ๆ ในด้านการเงิน หรือการลงทุนการเงิน: ไพ่ใบนี้บ่งบอกถึงโอกาสใหม่ที่เปิดให้คุณเกี่ยวกับการเงิน เช่น การเริ่มต้นธุรกิจใหม่ หรือการได้รับเงินก้อนที่ทำให้คุณสามารถลงทุนได้",
+								"The King of Pentacles (ราชาแห่งเหรียญ)ความหมาย: ไพ่ King of Pentacles แสดงถึงความมั่นคงและความสำเร็จในด้านการเงินการเงิน: ไพ่ใบนี้หมายถึงการมีความมั่นคงทางการเงิน การควบคุมทรัพย์สินอย่างมืออาชีพ และการมีความสามารถในการทำให้การเงินเติบโตอย่างยั่งยืน",
+								"The Ten of Pentacles (สิบเหรียญ)ความหมาย: ไพ่ Ten of Pentacles เป็นไพ่ที่แสดงถึงความมั่นคงทางการเงินและความเจริญรุ่งเรืองการเงิน: ไพ่ใบนี้บ่งบอกถึงความสำเร็จที่ยั่งยืนในด้านการเงิน มันอาจหมายถึงการลงทุนที่ประสบผลสำเร็จ หรือการได้รับผลตอบแทนจากการทำงานหนักในระยะยาว",
+								"The Four of Pentacles (สี่แห่งเหรียญ)ความหมาย: ไพ่ Four of Pentacles สะท้อนถึงความมั่นคงทางการเงิน แต่ในขณะเดียวกันก็แสดงถึงการยึดมั่นกับสิ่งที่มีอยู่การเงิน: ไพ่ใบนี้แสดงถึงการมีความมั่นคงทางการเงินในปัจจุบัน แต่มันก็เตือนให้ระวังไม่ให้เกิดความตึงเครียดในการจัดการทรัพย์สินหรือการรักษาเงินเก็บ โดยอาจต้องพิจารณาการลงทุนหรือการใช้จ่ายให้เหมาะสม",
+								"The Seven of Pentacles (เจ็ดแห่งเหรียญ)ความหมาย: ไพ่ Seven of Pentacles เป็นไพ่ที่เกี่ยวข้องกับการลงทุนและการรอผลตอบแทนจากการทำงานหนักการเงิน: ไพ่ใบนี้แนะนำให้คุณประเมินผลตอบแทนจากการลงทุนและพิจารณาว่าคุณต้องการที่จะทำอย่างไรในอนาคต อาจหมายถึงการประเมินสถานการณ์ทางการเงินหรือการตัดสินใจทางการเงินในระยะยาว",
+								"The Two of Pentacles (สองแห่งเหรียญ)ความหมาย: ไพ่ Two of Pentacles แสดงถึงการจัดการหลายๆ สิ่งในเวลาเดียวกันการเงิน: ไพ่ใบนี้ชี้ให้เห็นถึงการบริหารจัดการการเงินในหลายๆ ด้าน เช่น การทำงานหลายๆ งานพร้อมกัน การลงทุนหลายที่ หรือการจัดสรรเงินอย่างมีประสิทธิภาพ",
+								"The Knight of Pentacles (อัศวินแห่งเหรียญ)ความหมาย: ไพ่ Knight of Pentacles แสดงถึงความอดทนและการทำงานหนักการเงิน: ไพ่ใบนี้บ่งบอกถึงการที่คุณต้องทำงานหนักเพื่อสร้างความมั่นคงทางการเงิน อาจเป็นการลงทุนที่ต้องใช้เวลาหรือการวางแผนการเงินอย่างรอบคอบ",
+								"The Five of Pentacles (ห้าแห่งเหรียญ)ความหมาย: ไพ่ Five of Pentacles แสดงถึงการสูญเสียหรือความยากลำบากทางการเงินการเงิน: ไพ่ใบนี้เตือนให้ระวังการสูญเสียทางการเงินหรือภาวะขัดสนทางการเงิน อาจหมายถึงการต้องประสบปัญหาทางการเงินหรือการต้องรับมือกับสถานการณ์ที่ยากลำบากทางการเงินในช่วงนี้",
+								" The Six of Pentacles (หกแห่งเหรียญ)ความหมาย: ไพ่ Six of Pentacles แสดงถึงความสมดุลในการให้และรับการเงิน: ไพ่ใบนี้บ่งบอกถึงการแบ่งปันหรือการช่วยเหลือผู้อื่นในเรื่องการเงิน มันอาจหมายถึงการได้รับการช่วยเหลือทางการเงินจากผู้อื่น หรือการแบ่งปันความมั่งคั่งของคุณให้กับคนที่ต้องการ",
+								"The Wheel of Fortune (วงล้อแห่งโชคชะตา)ความหมาย: ไพ่ The Wheel of Fortune บ่งบอกถึงการหมุนเวียนและการเปลี่ยนแปลงในชีวิตการเงิน: ไพ่ใบนี้ชี้ให้เห็นว่าคุณอาจจะได้รับโชคลาภหรือโอกาสทางการเงินในเร็วๆ นี้ โชคชะตาอาจทำให้สถานการณ์การเงินของคุณเปลี่ยนแปลงไปในทิศทางที่ดีขึ้น",
+								];
+
+    // Function to start the prediction
+    function startPrediction() {
+      // Show loading message
+      document.getElementById('loadingMessage').style.display = 'block';
+
+      // Simulate a delay before showing the result
+      setTimeout(function() {
+        // Hide loading message
+        document.getElementById('loadingMessage').style.display = 'none';
+
+        // Show random tarot card
+        const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+        document.getElementById('result').innerText = randomCard;
+
+        // Show modal with result
+        document.getElementById("myModal").style.display = "block";
+      }, 9000); // Simulate a 2-second delay
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>

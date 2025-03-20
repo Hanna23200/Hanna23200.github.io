@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="th">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงินผ่าน PromptPay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #624e9c;
+        }
+        #qr-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+            border: 5px solid #4CAF50;
+            border-radius: 10px;
+        }
+        input, button {
+            font-size: 18px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔗 สแกน QR เพื่อชำระเงิน</h1>
+    <p>กรอกจำนวนเงินที่ต้องการชำระ (บาท)</p>
+    
+    <input type="number" id="amount" placeholder="ขั้นต่ำ 29" min="1" required>
+    <button onclick="generateQR()">สร้าง QR Code</button>
+
+    <div id="qr-container" style="display: none;">
+        <h2>📌 สแกนจ่ายด้วยแอปธนาคาร</h2>
+        <img id="qr-code" src="" alt="PromptPay QR Code">
+    </div>
+
+    <script>
+        function generateQR() {
+            let amount = document.getElementById("amount").value;
+            let promptPayID = "0927563495"; // แก้เป็นเบอร์ PromptPay ของคุณ
+            if (amount <= 28 || isNaN(amount)) {
+                alert("กรุณากรอกจำนวนเงินให้ถูกต้อง!");
+                return;
+            }
+            let qrURL = `https://promptpay.io/${promptPayID}/${amount}.png`;
+            document.getElementById("qr-code").src = qrURL;
+            document.getElementById("qr-container").style.display = "block";
+        }
+    </script>
+
+</body>
+
+<ul>
+	<li><h2><a href="index.html">Home</a></h2></li>
+	
+
+	
+	
+
+</ul>
+</html>

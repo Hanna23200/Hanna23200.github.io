@@ -1,0 +1,253 @@
+<!DOCTYPE HTML>
+<html lang="th">
+
+<head>
+		<title>Horoscope</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Horoscope</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="1.html">ดูดวงประจำวัน</a></li>
+						<li><a href="2.html">ดูดวงความรัก</a></li>
+						<li><a href="3.html">ดูดวงการเงิน</a></li>
+						<li><a href="elements.html">Support</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+			
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">ดวงโดยรวม</h1>
+
+							<!DOCTYPE html>
+							<html lang="th">
+							<head>
+							  <meta charset="UTF-8">
+							  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							  <title>การดูดวงไพ่ทาโร่ต์</title>
+							  <style>
+								body {
+								  font-family: Arial, sans-serif;
+								  text-align: center;
+								  padding: 50px;
+								  background-color: #2e1160;
+								}
+								button {
+								  padding: 10px 20px;
+								  font-size: 16px;
+								  background-color: #4CAF50;
+								  color: rgb(238, 208, 208);
+								  border: none;
+								  cursor: pointer;
+								  margin-top: 20px;
+								}
+								button:hover {
+								  background-color: #45a049;
+								}
+							
+								/* สไตล์ของ Modal */
+								.modal {
+								  display: none; /* เริ่มต้นไม่ให้แสดง */
+								  position: fixed; /* อยู่ตำแหน่งคงที่ */
+								  z-index: 1; /* ทำให้ Modal อยู่ด้านบนสุด */
+								  left: 0;
+								  top: 0;
+								  width: 100%;
+								  height: 100%;
+								  background-color: rgba(0, 0, 0, 0.4); /* พื้นหลังมืด */
+								  overflow: auto;
+								  padding-top: 60px;
+								}
+							
+								/* สไตล์ของ Modal Content */
+								.modal-content {
+								  background-color: #511c5e;
+								  margin: 5% auto;
+								  padding: 20px;
+								  border: 1px solid #adbc5a;
+								  width: 80%;
+								  max-width: 500px;
+								}
+							
+								/* ปุ่มปิด */
+								.close {
+								  color: #aaa;
+								  float: right;
+								  font-size: 28px;
+								  font-weight: bold;
+								}
+							
+								.close:hover,
+								.close:focus {
+								  color: black;
+								  text-decoration: none;
+								  cursor: pointer;
+								}
+							  </style>
+							  
+							</head>
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horoscope</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #2e1160;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      overflow: auto;
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #511c5e;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .loading {
+      display: none;
+      font-size: 20px;
+      color: rgb(216, 88, 150);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>การดูดวงไพ่ทาโร่ต์</h1>
+  <p>กรุณากรอกข้อมูลของคุณเพื่อเริ่มการทำนาย</p>
+
+  <!-- Form to enter name and birthdate -->
+  <form id="horoscopeForm">
+    <input type="text" id="name" placeholder="ชื่อของคุณ" required><br><br>
+    <input type="date" id="dob" required><br><br>
+    <button type="button" onclick="startPrediction()">เริ่มทำนาย</button>
+  </form>
+
+  <!-- Loading message -->
+  <div class="loading" id="loadingMessage">ตั้งจิตอธิษฐานให้มั่น กำลังทำนาย... โปรดรอสักครู่ </div>
+
+  <!-- Modal for result -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>ผลการดูดวง</h2>
+      <p id="result"></p>
+    </div>
+  </div>
+
+  <script>
+    // Tarot card data
+    const tarotCards = [
+								"ไผ่แห่งการเปลี่ยนแปลง (Bamboo of Transformation)ความหมาย: ช่วงเวลาแห่งการเปลี่ยนแปลง ต้องเตรียมตัวให้พร้อมแนวทาง: ปรับตัวและยืดหยุ่นเพื่อรับมือกับสิ่งที่กำลังมา",
+								"ไผ่แห่งความมั่งคั่ง (Bamboo of Wealth)ความหมาย: มีโอกาสด้านการเงิน ได้รับผลตอบแทนจากความพยายามแนวทาง: ควรวางแผนการใช้เงินให้รอบคอบ",
+								"ไผ่แห่งอุปสรรค (Bamboo of Obstacles)ความหมาย: อาจเผชิญปัญหา หรือมีความล่าช้าในชีวิตแนวทาง: อดทนและใช้สติปัญญาในการแก้ไขปัญหา",
+								"ไผ่แห่งความรัก (Bamboo of Love)ความหมาย: ความรักดี มีโอกาสพบคู่หรือความสัมพันธ์แข็งแรงขึ้นแนวทาง: เปิดใจและสื่อสารให้มากขึ้น",
+								"ไผ่แห่งความสมดุล (Bamboo of Balance)ความหมาย: ต้องสร้างสมดุลระหว่างงาน ชีวิต และอารมณ์แนวทาง: ดูแลสุขภาพจิตและร่างกายให้ดี",
+								"ไผ่แห่งความสำเร็จ (Bamboo of Victory)ความหมาย: ความสำเร็จใกล้เข้ามา หลังจากความพยายามแนวทาง: อย่ายอมแพ้ และตั้งเป้าหมายให้ชัดเจน",
+								"ไผ่แห่งสันติสุข (Bamboo of Peace)ความหมาย: ช่วงเวลาสงบ ควรใช้โอกาสนี้พักผ่อนและดูแลตัวเองแนวทาง: หลีกเลี่ยงความขัดแย้ง และหาเวลาทำสมาธิ",
+								"ผ่แห่งโชคชะตา (Bamboo of Destiny)ความหมาย: มีสิ่งใหม่ๆ เข้ามา ควรตัดสินใจให้ดีแนวทาง: เชื่อมั่นในตัวเอง และอย่ากลัวการเปลี่ยนแปลง",
+								"ไผ่แห่งความหวัง (Bamboo of Hope)ความหมาย: มีโอกาสดีที่รออยู่ อย่าหมดกำลังใจแนวทาง: เดินหน้าต่อไป ความสำเร็จอยู่ไม่ไกล",
+								"ไผ่แห่งความหวัง (Bamboo of Hope)ความหมาย: มีโอกาสดีที่รออยู่ อย่าหมดกำลังใจแนวทาง: เดินหน้าต่อไป ความสำเร็จอยู่ไม่ไกล",
+								"ไผ่แห่งพลัง (Bamboo of Strength)ความหมาย: มีพลังและความมุ่งมั่นสูง เหมาะกับการริเริ่มสิ่งใหม่แนวทาง: ใช้ความมุ่งมั่นให้ถูกทาง ระวังความใจร้อน",
+								" ไผ่แห่งโชคลาภ (Bamboo of Prosperity)ความหมาย: ดวงโดยรวมกำลังรุ่งเรือง มีโชคเข้ามา การเงินดี งานก้าวหน้าแนวทาง: ใช้โอกาสให้เต็มที่ แต่อย่าประมาทเรื่องการใช้จ่าย",
+								];
+
+    // Function to start the prediction
+    function startPrediction() {
+      // Show loading message
+      document.getElementById('loadingMessage').style.display = 'block';
+
+      // Simulate a delay before showing the result
+      setTimeout(function() {
+        // Hide loading message
+        document.getElementById('loadingMessage').style.display = 'none';
+
+        // Show random tarot card
+        const randomCard = tarotCards[Math.floor(Math.random() * tarotCards.length)];
+        document.getElementById('result').innerText = randomCard;
+
+        // Show modal with result
+        document.getElementById("myModal").style.display = "block";
+      }, 9000); // Simulate a 2-second delay
+    }
+
+    // Function to close modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
+
+</body>
+</html>
